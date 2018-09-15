@@ -1,2 +1,0 @@
-FROM openjdk:8
-RUN curl https://cli-assets.heroku.com/install.sh | sh
