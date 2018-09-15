@@ -6,8 +6,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker:
-        version: 18.05.0-ce
-
+          version: 18.05.0-ce
       - run: |
           TAG=1.$CIRCLE_BUILD_NUM
           docker build -t romanisko/heroku-cli-deploy:$TAG .
