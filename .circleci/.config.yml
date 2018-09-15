@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: docker
+    steps:
+      - checkout
+      - setup_remote_docker:
+        version: 18.05.0-ce
+
+      - run: |
+          TAG=1.$CIRCLE_BUILD_NUM
+          docker build -t romanisko/heroku-cli-deploy:$TAG .
+          docker login -u $DOCKER_USER -p $DOCKER_PASS
+          docker push romanisko/heroku-cli-deploy:$TAG
