@@ -12,3 +12,5 @@ jobs:
           docker build -t romanisko/heroku-cli-deploy:$TAG .
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker push romanisko/heroku-cli-deploy:$TAG
+          docker tag romanisko/heroku-cli-deploy:$TAG romanisko/heroku-cli-deploy:latest
+          docker push romanisko/heroku-cli-deploy:latest
