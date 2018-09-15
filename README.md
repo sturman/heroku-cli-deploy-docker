@@ -1,4 +1,4 @@
-#heroku-cli-deploy-docker
+# heroku-cli-deploy-docker
 
 [![CircleCI](https://circleci.com/gh/RomanIsko/heroku-cli-deploy-docker.svg?style=svg)](https://circleci.com/gh/RomanIsko/heroku-cli-deploy-docker)
 
